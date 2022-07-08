@@ -96,7 +96,7 @@ public class C02BasicOutputMethod {
 		System.out.printf("\n");
 		
 		//문제
-//			*
+//			*   
 //		   ***
 //		  *****
 //		 *******
@@ -110,7 +110,7 @@ public class C02BasicOutputMethod {
 		System.out.printf("%6s\n", "*****");
 		System.out.printf("%5s\n", "***");
 		System.out.printf("%4s\n", "*");
-		System.out.println("GitHub TEST");
+		System.out.println("GitHub TEST2");
 	}
 
 }
