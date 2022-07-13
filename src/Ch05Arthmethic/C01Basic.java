@@ -94,6 +94,7 @@ public class C01Basic {
 		int b = sc.nextInt();
 		System.out.print((a>b) ? a : b);
 		
+		sc.close();
 		
 	}
 
