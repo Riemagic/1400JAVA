@@ -88,13 +88,19 @@ public class C01Basic {
 		//문제
 		//두 수를 입력받아 큰 수를 출력하세요
 		Scanner sc = new Scanner(System.in);
-		System.out.print("숫자1 입력 : ");
+		System.out.print("정수1 입력 : ");
 		int a = sc.nextInt();
-		System.out.print("숫자2 입력 : ");
+		System.out.print("정수2 입력 : ");
 		int b = sc.nextInt();
-		System.out.print((a>b) ? a : b);
+		
+		int result = a > b ? a : b;
+		System.out.println("큰 수 : " + result);
 		
 		sc.close();
+		
+		
+		
+		
 		
 	}
 
