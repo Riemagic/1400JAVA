@@ -11,7 +11,7 @@ public class C01If {
 //			참인경우 실행되는 코드;
 //		}
 		
-		int age = 7;
+//		int age = 7;
 				
 //		if(age >= 8)
 //		{
@@ -191,35 +191,50 @@ public class C01If {
 		//60점 이상이면 'D' 출력
 		//60점 미만이면 'F' 출력
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("국어 성적 입력 : ");
-		int kor = sc.nextInt();
-		System.out.print("영어 성적 입력 : ");
-		int eng = sc.nextInt();
-		System.out.print("수학 성적 입력 : ");
-		int mat = sc.nextInt();
-		double avg = (double)(kor + eng + mat) / 3;
-		
-		if(avg >= 90){
-			System.out.printf("평균 %.2f점 A 등급", avg);
-		}
-		else if(avg >= 80){
-			System.out.printf("평균 %.2f점 B 등급", avg);
-		}
-		else if(avg >= 70){
-			System.out.printf("평균 %.2f점 C 등급", avg);
-		}
-		else if(avg >= 60){
-			System.out.printf("평균 %.2f점 D 등급", avg);
-		}
-		else{
-			System.out.printf("평균 %.2f점 F 등급", avg);
-		}
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("평균 점수 입력 : ");
+//		int avg = sc.nextInt();
+//		
+//		if(avg >= 90){
+//			System.out.printf("평균 %d점 A 등급", avg);
+//		}
+//		else if(avg >= 80){
+//			System.out.printf("평균 %d점 B 등급", avg);
+//		}
+//		else if(avg >= 70){
+//			System.out.printf("평균 %d점 C 등급", avg);
+//		}
+//		else if(avg >= 60){
+//			System.out.printf("평균 %d점 D 등급", avg);
+//		}
+//		else{
+//			System.out.printf("평균 %d점 F 등급", avg);
+//		}
 		
 		
 		
 		//문제 - else if
 		//세 정수를 입력받아서 큰 수를 출력하세요(단순 if문으로만)
+		Scanner sc = new Scanner(System.in);
+		System.out.print("첫번째 정수 입력 : ");
+		int n1 = sc.nextInt();
+		System.out.print("두번째 정수 입력 : ");
+		int n2 = sc.nextInt();
+		System.out.print("세번째 정수 입력 : ");
+		int n3 = sc.nextInt();
+		
+		if(n1 >= n2 && n1 >= n3)	//n1이 제일 큰 경우
+		{
+			System.out.println("가장 큰 수는 " + n1 + "입니다");
+		}
+		else if(n2 >= n1 && n2 >= n3)	//n2가 제일 큰 경우
+		{
+			System.out.println("가장 큰 수는 " + n2 + "입니다");
+		}
+		else
+		{
+			System.out.println("가장 큰 수는 " + n3 + "입니다");
+		}
 
 		
 		
