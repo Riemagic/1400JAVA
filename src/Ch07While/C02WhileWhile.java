@@ -234,20 +234,22 @@ public class C02WhileWhile {
 		//*******
 		
 		//다이아몬드모양 출력
-		int i = 0;
-		int j = 0;
-		int k = 0;
+		int i = 0;	//행증가
+		int j = 0;	//공백
+		int k = 0;	//별
 		while(i < 4)
 		{
+			//공백찍기
 			j = 0;
-			while(j <= 2 - i)
+			while(j <= 2-i)
 			{
 				System.out.print(' ');
 				j++;
 			}
 			
+			//별찍기
 			k = 0;
-			while(k <= 2*i);
+			while(k <= 2*i)
 			{
 				System.out.print('*');
 				k++;
@@ -313,5 +315,5 @@ public class C02WhileWhile {
 		
 		
 	}
-
 }
+

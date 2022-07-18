@@ -1,8 +1,11 @@
 package Ch08For;
 
+import java.util.Scanner;
+
 public class C01For {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
 //		int i = 1;
 //		while(i <= 10)
@@ -115,18 +118,99 @@ public class C01For {
 		
 		
 		//전체 구구단 역순 출력
-		int i;
-		int dan;
-		for(dan = 9; dan >= 2; dan--)
-		{
-			System.out.printf("[ %d 단]\n", dan);
-			for(i = 9; i >= 1; i--)
-			{
-				System.out.printf("%d x %d = %d\n", dan, i, dan*i);
-			}
-			System.out.println();
-		}
+//		int i;
+//		int dan;
+//		for(dan = 9; dan >= 2; dan--)
+//		{
+//			System.out.printf("[ %d 단]\n", dan);
+//			for(i = 9; i >= 1; i--)
+//			{
+//				System.out.printf("%d x %d = %d\n", dan, i, dan*i);
+//			}
+//			System.out.println();
+//		}
+		
+		
+		
 		//별찍기(직삼각형,역직각삼각형,정삼각형,역정삼각형...)
+		//직삼각형
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i;
+//		int j;
+//		for(i = 0; i < n; i++)
+//		{
+//			for(j = 0; j <= i; j++)
+//			{
+//				System.out.print('*');
+//			}
+//			System.out.println();
+//		}
+		
+		
+		//역직삼각형
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i;
+//		int j;
+//		for(i = 0; i <= n; i++)
+//		{
+//			for(j = n; j > i; j--)
+//			{
+//				System.out.print('*');
+//			}
+//			System.out.println();
+//		}
+		
+		
+		
+		//정삼각형
+		//   *
+		//  ***
+		// *****
+		//*******
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i;
+//		int j;
+//		int k;
+//		for(i = 0; i < n; i++)
+//		{
+//			for(j = 0; j < n - i - 1; j++)
+//			{
+//				System.out.print(' ');
+//			}
+//			for(k = 0; k < 2 * i + 1; k++)
+//			{
+//				System.out.print('*');
+//			}
+//			System.out.println();
+//		}
+		
+		
+		
+		//역정삼각형
+		//*******
+		// *****
+		//  ***
+		//   *
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i;
+//		int j;
+//		int k;
+//		for(i = 0; i < n; i++)
+//		{
+//			for(j = 0; j < i; j++)
+//			{
+//				System.out.print(' ');
+//			}
+//			for(k = 0; k < 2 * n - 1 - 2 * i ; k++)
+//			{
+//				System.out.print('*');
+//			}
+//			System.out.println();
+//		}
 		
 
 	}
