@@ -79,37 +79,237 @@ public class C02WhileWhile {
 //		}
 //		System.out.println();
 		
+		
 		//*
 		//**
 		//***
 		//****
-		int c = 1;
-		int d;
-		int cnt1 = 0;
-		while(c > 0)
-		{
-			d = 4;
-			d -= cnt1;
-			while(d > 0)
-			{
-				System.out.print('*');
-				d--;
-			}
-			System.out.println();
-			c--;
-			cnt1++;
-		}
+//		i(행)	j(열)
+//		i=0		j=0
+//		i++		j++
+//		i<4		j<=i
+		
+//		int i = 0;
+//		int j = 0;
+//		while(i < 4)
+//		{
+//			j = 0;
+//			while(j <= i)
+//			{
+//				System.out.print('*');
+//				j++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		System.out.println();
+		
+		
 		
 		//****
 		//***
 		//**
 		//*
+//		i(행)	j(열)
+//		i=4		j=0
+//		i++;	j++;
+//		i<4		j<=
+//		int i2 = 0;
+//		int j2 = 0;
+//		while(i2 < 4)
+//		{
+//			j2 = 0;
+//			while(3-i2 >= j2)
+//			{
+//				System.out.print('*');
+//				j2++;
+//			}
+//			System.out.println();
+//			i2++;
+//		}
+//		System.out.println();
+		
+		
 		
 		//   *
 		//  ***
 		// *****
 		//*******
+//		i(행)		j(공백)		k(별)
+//		0			0-2			0-0
+//		1			0-1			0-2
+//		2			0-0			0-4
+//		3			x			0-6
+//		i = 0		j = 0		k = 0
+//		i++;		j++;		k++;
+//		i < 4		j <= 2-i	k <= 2*i
 		
+//		int i = 0;	//행증가
+//		int j = 0;	//공백
+//		int k = 0;	//별
+//		while(i < 4)
+//		{
+//			//공백찍기
+//			j = 0;
+//			while(j <= 2-i)
+//			{
+//				System.out.print(' ');
+//				j++;
+//			}
+//			
+//			//별찍기
+//			k = 0;
+//			while(k <= 2*i)
+//			{
+//				System.out.print('*');
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
+		
+		
+		//*******
+		// *****
+		//  ***
+		//   *
+//		i(행)	j(공백)		k(별)
+//		0		x			0-6
+//		1		0-0			0-4
+//		2		0-1			0-2
+//		3		0-2			0-0
+//		i = 0	j = 0		k = 0
+//		i++;	j++;		k++;
+//		i < 4	j <= i-1	k <= 6 - 2i
+		
+//		int i = 0;
+//		int j = 0;
+//		int k = 0;
+//		while(i < 4)
+//		{
+//			j = 0;
+//			while(j <= i-1)
+//			{
+//				System.out.print(' ');
+//				j++;
+//			}
+//			
+//			k = 0;
+//			while(k <= 6 - 2*i)
+//			{
+//				System.out.print('*');
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
+		
+		
+		//문제
+		//다이아몬드모양 출력
+		//모래시계모양 출력
+		//높이 입력받아 출력하는 직각 삼각형
+		//높이 입력받아 출력하는 직각 역삼각형
+		//높이 입력받아 출력하는 정삼각형
+		//높이 입력받아 출력하는 역삼각형
+		//높이 입력받아 출력하는 다이아몬드
+		//높이 입력받아 출력하는 모래시계
+		
+		//   *
+		//  ***
+		// *****
+		//*******
+		// *****
+		//  ***
+		//   *
+		
+		//*******
+		// *****
+		//  ***
+		//   *
+		//  ***
+		// *****
+		//*******
+		
+		//다이아몬드모양 출력
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		while(i < 4)
+		{
+			j = 0;
+			while(j <= 2 - i)
+			{
+				System.out.print(' ');
+				j++;
+			}
+			
+			k = 0;
+			while(k <= 2*i);
+			{
+				System.out.print('*');
+				k++;
+			}
+			System.out.println();
+			i++;
+		}
+		
+		
+		//높이 입력받아 출력하는 정삼각형
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i = 0;
+//		int j = 0;
+//		int k = 0;
+//
+//		while(i < n)
+//		{
+//			j = 0;
+//			while(j <= n - i - 2)
+//			{
+//				System.out.print(' ');
+//				j++;
+//			}
+//			
+//			k = 0;
+//			while(k <= 2*i)
+//			{
+//				System.out.print('*');
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
+		
+		
+		//높이 입력받아 출력하는 역삼각형
+//		System.out.print("높이 입력 : ");
+//		int n = sc.nextInt();
+//		int i = 0;
+//		int j = 0;
+//		int k = 0;
+//
+//		while(i < n)
+//		{
+//			j = 0;
+//			while(j <= i - 1)
+//			{
+//				System.out.print(' ');
+//				j++;
+//			}
+//			
+//			k = 0;
+//			while(k <= 2*n - 2*(i+1))
+//			{
+//				System.out.print('*');
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
 		
 		
 	}
