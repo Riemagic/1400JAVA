@@ -26,8 +26,8 @@ public class C07리터럴상수 {
 //		System.out.println(num1);
 		
 		//예제 2
-		int num1 = 2147483647;	//int 범위 -2^31 ~ 2^31-1(약21억)
-		long num2 = 4000000000L;	//40억
+//		int num1 = 2147483647;	//int 범위 -2^31 ~ 2^31-1(약21억)
+//		long num2 = 4000000000L;	//40억
 		
 	}
 

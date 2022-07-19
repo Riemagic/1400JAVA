@@ -212,6 +212,42 @@ public class C01For {
 //			System.out.println();
 //		}
 		
+		
+		
+		//다이아몬드
+		System.out.print("높이 입력 : ");
+		int n = sc.nextInt();
+		int i;
+		int j;
+		int k;
+		for(i = 0; i < 2*n - 1; i++)
+		{
+			if(i <= n)
+			{
+				for(j = 0; j < n - i - 1; j++)
+				{
+					System.out.print(' ');
+				}
+				for(k = 0; k < 2 * i + 1; k++)
+				{
+					System.out.print('*');
+				}
+			}
+			else
+			{
+				for(j = 0; j <= i-4; i++)
+				{
+					System.out.print(' ');
+				}
+				for(k = 0; k < 2 * n - 1 - 2 * i ; k++)
+					{
+						System.out.print('*');
+					}
+			}
+			System.out.println();
+		}
+		
+		
 
 	}
 

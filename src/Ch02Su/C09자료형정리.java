@@ -18,7 +18,7 @@ public class C09자료형정리 {
 		System.out.println("var4 : " + var4);
 		
 		//byte : 1byte 정수(음수저장가능)
-		byte var5 = 127;	//byte 범위(-128 ~ 127) 안에 들어감
+//		byte var5 = 127;	//byte 범위(-128 ~ 127) 안에 들어감
 //		byte var6 = 128;	안들어감
 //		byte var7 = -129;	안들어감
 		
@@ -57,7 +57,7 @@ public class C09자료형정리 {
 		//3 단일문자
 		//------------------------------
 		char c1 = 'A';
-		char c2 = 'B';
+//		char c2 = 'B';
 		System.out.printf("%d %c\n", (int)c1, c1);
 		
 		
@@ -77,8 +77,8 @@ public class C09자료형정리 {
 		//------------------------------
 		//5 boolean형(true/false저장)
 		//------------------------------
-		boolean flag1 = true;
-		boolean flag2 = false;
+//		boolean flag1 = true;
+//		boolean flag2 = false;
 		
 	}
 

@@ -1,8 +1,11 @@
 package Ch07While;
 
+//import java.util.Scanner;
+
 public class C02WhileWhile {
 
 	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
 		
 		//전체 구구단 출력(2-9단)
 //		int dan = 2;
@@ -216,14 +219,7 @@ public class C02WhileWhile {
 		//높이 입력받아 출력하는 역삼각형
 		//높이 입력받아 출력하는 다이아몬드
 		//높이 입력받아 출력하는 모래시계
-		
-		//   *
-		//  ***
-		// *****
-		//*******
-		// *****
-		//  ***
-		//   *
+	
 		
 		//*******
 		// *****
@@ -233,26 +229,68 @@ public class C02WhileWhile {
 		// *****
 		//*******
 		
+		//   *
+		//  ***
+		// *****
+		//*******
+		// *****
+		//  ***
+		//   *
 		//다이아몬드모양 출력
-		int i = 0;	//행증가
-		int j = 0;	//공백
-		int k = 0;	//별
-		while(i < 4)
+//		i(행)		j(공백)		k(별)
+//		0			0-2			0-0
+//		1			0-1			0-2
+//		2			0-0			0-4
+//		3			x			0-6
+//		-----------------------------
+//					j=0			k=0
+//					j++			k++
+//					j<=			k<=
+//		
+//		4			0-0			0-4
+//		5			0-1			0-2
+//		6			0-2			0-0
+//		-----------------------------
+//					j=0			k=0
+//					j++			k++
+//					j<=			k<+
+		
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		while(i <= 6)
 		{
-			//공백찍기
-			j = 0;
-			while(j <= 2-i)
+			if(i<=3)
 			{
-				System.out.print(' ');
-				j++;
+				j = 0;
+				while(j <= 2 - i)
+				{
+					System.out.print(' ');
+					j++;
+				}
+				
+				k = 0;
+				while(k <= 2 * i)
+				{
+					System.out.print('*');
+					k++;
+				}
 			}
-			
-			//별찍기
-			k = 0;
-			while(k <= 2*i)
+			else
 			{
-				System.out.print('*');
-				k++;
+				j = 0;
+				while(j <= i - 4)
+				{
+					System.out.print(' ');
+					j++;
+				}
+				
+				k = 0;
+				while(k <= 12 - 2 * i)
+				{
+					System.out.print('*');
+					k++;
+				}
 			}
 			System.out.println();
 			i++;
