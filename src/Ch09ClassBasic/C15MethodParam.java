@@ -10,8 +10,8 @@ class Test
 {
 	void setSimpleXY(Simple ob, int x, int y)
 	{
-		ob.x = 100;
-		ob.y = 200;
+		ob.x = x;
+		ob.y = y;
 	}
 }
 

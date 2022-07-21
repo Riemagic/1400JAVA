@@ -21,7 +21,7 @@ class Rectangle
 	
 	void show()
 	{
-		System.out.printf("(%d, %d)에서 크기가 %d x %d인 사각형\n", x, y, width, height);
+		System.out.printf("(%d,%d)에서 크기가 %dx%d인 사각형\n", x, y, width, height);
 	}
 	
 	boolean contains(Rectangle r)
