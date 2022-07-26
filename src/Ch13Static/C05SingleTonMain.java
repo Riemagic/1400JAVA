@@ -1,17 +1,15 @@
 package Ch13Static;
 
-import java.util.Arrays;
-
 class Product
 {
 	String PName;
 	int amount;
 	
 	//모든 인자를 받아 저장하는 생성자를 만듭니다.
-	public Product(String pName, int amount)
+	public Product(String PName, int amount)
 	{
 		super();
-		PName = pName;
+		this.PName = PName;
 		this.amount = amount;
 	}
 
@@ -35,11 +33,13 @@ class Refrigerator
 	
 
 	
-	Product [] list = new Product[100];
-	int ProductNum = 0;
+	Product [] list = new Product[100];	//->컬렉션으로 처리시
+										//  메모리 허용범위내에서 확장가능
+	int ProductNum = 0;	//idx, 상품개수
+	
 	void SetProduct(Product product)
 	{
-		if(ProductNum >= 99)
+		if(ProductNum <= 99)
 		{
 			//list  ProductNum번째 idx에 외부에서 생성된 Product가 연결
 			list[ProductNum] = product;
@@ -53,7 +53,7 @@ class Refrigerator
 		}
 	}
 	
-	Product getProduct(String search,int amount)
+	Product GetProduct(String search, int amount)
 	{
 		//반복문과 문자열 검색 처리를 통해서 list에 저장된 search
 		//객체 꺼내와서 요청 개수만큼 차감
@@ -69,8 +69,18 @@ class Refrigerator
 					if(list[i].amount == amount)
 					{
 						//재고량 == 요청수량
+						
+						Product prod = list[i];
+						
 						//list에서 제품 삭제(자료구조..삭제처리 -> 컬렉션)
-						//return Product
+						for(int j = i + 1; j < ProductNum; j++)
+						{
+							list[j-1] = list[j];
+						}
+						list[ProductNum-1] = null;
+						ProductNum--;
+						
+						return prod;
 					}
 					
 					else if(list[i].amount > amount)
@@ -82,11 +92,6 @@ class Refrigerator
 						//Product 리턴
 						return new Product(list[i].PName, amount);
 						
-					}
-					
-					else
-					{
-						return null;
 					}
 				}
 			}
@@ -114,15 +119,35 @@ public class C05SingleTonMain {
 		
 		//상품정보객체 생성 
 		Product prod = new Product("콜라", 5);
+		Product prod2 = new Product("사이다", 5);
 		
 		//냉장고에 상품저장
 		refrigerator.SetProduct(prod);
+		refrigerator.SetProduct(prod2);
 
 		//냉장고에 상품반환
-		Product prod1 = refrigerator.getProduct("사이다", 1); 
+		Product prod1 = refrigerator.GetProduct("콜라", 5); 
 				
 		System.out.println("get Item : " + prod1.toString());
+		for(int i = 0; i < refrigerator.ProductNum; i++)
+		{
+			System.out.println(refrigerator.list[i].toString());
+		}
 				
 	}
 
 }
+
+//클래스 기본
+//
+//구성
+//(속성(==필드,멤버변수) / 기능(==멤버메서드) / 생성자)
+//오버로딩,지역변수
+//
+//정보은닉(한정자, private -> getter and setter)
+//this(멤버/매개변수 구별, 다른 생성자 호출)
+//
+//배열
+//일반자료형 int [] arr = new int[5]; arr[0]=10;
+//클래스자료형 Person [] arr = new Person[5]
+//		arr[0] = new Person();
