@@ -6,6 +6,11 @@ interface Controller
 	void OFF();
 }
 
+interface Searchable
+{
+	void SearchURL(String url);
+}
+
 class TV implements Controller
 {
 
@@ -21,9 +26,16 @@ class TV implements Controller
 	
 }
 
+class SmartTV extends TV implements Searchable
+{
+	public void SearchURL(String url)
+	{
+		System.out.println(url + "로 검색합니다");
+	}
+}
+
 class Radio implements Controller
 {
-
 	@Override
 	public void ON() {
 		System.out.println("라디오를 켭니다");
@@ -33,7 +45,6 @@ class Radio implements Controller
 	public void OFF() {
 		System.out.println("라디오를 끕니다");
 	}
-	
 }
 
 public class C01InterfaceMain {
@@ -66,8 +77,10 @@ public class C01InterfaceMain {
 //		remocon.ON();
 //		remocon.OFF();
 		
-		
-
+		SmartTV stv = new SmartTV();
+		stv.ON();
+		stv.OFF();
+		stv.SearchURL("www.naver.com");
 	}
 
 }
